@@ -4,13 +4,11 @@ import MainContainer from './containers/MainContainer'
 
 const App = () => {
     return (
-    <Fragment>
-    <section className="App">
-
-    {/* <h1> Hello, World!</h1> */}
-
-    </section>
-    <MainContainer/>
-    </Fragment>  );
+            <Fragment>
+                <section className="App">
+                </section>
+                <MainContainer/>
+            </Fragment>  
+           );
 }
 export default App;
