@@ -99,7 +99,18 @@ Also add the style loader, css loader and file-loader for styles and images. As 
     npm install style-loader css-loader file-loader
 
 
-# update app.js
+# update Index.js
+
+```js
+//  Index.js
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
+
+ReactDOM.render(<App />, document.getElementById('root'));
+```
+
+# update App.js
 ```js
 // app.js
 
@@ -124,15 +135,27 @@ export default App;
     color: #222222;
 }
 ```
-# update Index.js
 
-```js
-//  Index.js
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
-import App from './App'
+# update index.html
 
-ReactDOM.render(<App />, document.getElementById('root'));
+```html
+<!-- public/index.html -->
+<!-- ! index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+    <title>React Ecosystem</title>
+</head>
+<body>
+    <div id="root"></div>
+    <noscript>
+        Please enable Javascript to view this site.
+    </noscript>
+    <script src="../dist/bundle.js"></script>
+</body>
+</html>
 ```
 
 

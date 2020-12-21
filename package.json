@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "webpack-dev-server": "webpack-dev-server",
-    "start:dev": "webpack serve --mode development --open",
-    "dev": "webpack-dev-server --mode=development",
-    "build": "npx webpack --mode development",
     "start": "webpack serve --mode development --open index.js",
+    "webpack-dev-server": "webpack-dev-server",
+    "start:dev": "webpack serve --mode=development --open index.js",
+    "dev": "webpack-dev-server --mode=development --open index.js",
+    "devy": "webpack --mode development --open 'chrome",
+    "build": "npx webpack --mode development",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prod": "webpack --mode=production"
   },
@@ -20,6 +21,11 @@
     "file-loader": "^6.2.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-redux": "^7.2.2",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0",
     "style-loader": "^2.0.0"
   },
   "devDependencies": {
