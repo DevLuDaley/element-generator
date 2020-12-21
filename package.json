@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "webpack-dev-server": "webpack-dev-server",
     "start:dev": "webpack serve --mode development --open",
-    "dev": "npx webpack-dev-server --mode development",
+    "dev": "webpack-dev-server --mode=development",
     "build": "npx webpack --mode development",
     "start": "webpack serve --mode development --open index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prod": "webpack --mode=production"
   },
   "keywords": [],
   "author": "",
