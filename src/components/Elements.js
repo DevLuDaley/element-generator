@@ -5,6 +5,7 @@ const Elements = () => {
     var pTags// = `&lt;/p&gt;`
     
     return (<Fragment>
+    <h1>ELEMENTS [OPTIONS DROPDOWN MENU]</h1>
 
 <select>
 <option
@@ -15,6 +16,11 @@ const Elements = () => {
 <option
 value="&lt;H1&gt; &lt;/H1&gt;"
 >H1
+</option>
+
+<option
+value="&lt;H2&gt; &lt;/H2&gt;"
+>H2
 </option>
 
     &lt;H1&gt;
@@ -34,7 +40,7 @@ value="&lt;H1&gt; &lt;/H1&gt;"
     
     &lt;H6&gt;
     &lt;/H6&gt;
-    </select>
+</select>
 
     {/* {p} */}
 
