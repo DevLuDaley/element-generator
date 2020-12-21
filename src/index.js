@@ -14,9 +14,11 @@ const store = configureStore()
 // render(
 ReactDOM.render(
   <Provider store={store}>
-  <Router><React.StrictMode>
-  <App/>
-  </React.StrictMode></Router>,
+    <Router>
+        <React.StrictMode>
+            <App/>
+        </React.StrictMode>
+    </Router>
   </Provider>,
   document.getElementById('root')
 );
