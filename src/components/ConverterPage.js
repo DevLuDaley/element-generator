@@ -2,10 +2,15 @@ import React, { Fragment, useState, useEffect }from 'react'
 import Elements from '../components/Elements'
 import ElementsData from './ElementsData'
 import {CopyToClipboard} from 'react-copy-to-clipboard';
-import Button from '@material-ui/core/Button';
-import Box from '@material-ui/core/Box';
-import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
+// import Button from '@material-ui/core/Button';
+// import Box from '@material-ui/core/Box';
+// import Container from '@material-ui/core/Container';
+// import Grid from '@material-ui/core/Grid';
+// import { Input } from '@material-ui/core/';
+// import { Checkbox } from '@material-ui/core/';
+import { Grid, Container, Box, FormControl, FormGroup, Input, InputLabel, Button, Checkbox } from '@material-ui/core';
+// import  from '@material-ui/core/InputLabel';
+
 
 import CopyToClip from './CopyToClip'
 // import PropTypes from 'prop-types'
@@ -24,6 +29,7 @@ import CopyToClip from './CopyToClip'
         
 var [name, setName] = useState("")
 var [confirmed, setConfirmed] = useState(false)
+const [type, setType] = useState('')
 const [value, setValue] = useState('')
 const [copied, setCopied] = useState(false)
     // const [] = setState([])
@@ -36,40 +42,51 @@ const [copied, setCopied] = useState(false)
         <Fragment> 
         <Container>
             <h1>COVERTER PAGE</h1>
-            <Box component="span" m={1} color="text.primary">
+            {/* <Box component="span" m={1} color="text.primary"> */}
             {/* <Box color="text.primary" clone></Box> */}
         <div>
-              <form id='new-recipe-form' onSubmit={handleSubmit}>
-                <label> Enter text to be converted </label> 
-                    <input type="text" placeholder='enter text...' value={name} name="name" onChange={e => setName(e.target.value)}/>
-                    <Button type="submit" variant="contained" color="primary">
-                        Convert to Tag
-                    </Button>
-              </form>
+            <FormGroup id='convert-to-element-form' onSubmit={handleSubmit}>
 
-                        <Button variant="contained" color="primary" onClick={(e) => {console.log("value of e.target => ", e.target)}}
-                            type="copy">Copy Text to clipboard
-                        </Button>
-                           <br>
-                           </br>
-                           { confirmed ? 
-                               <section name={name}>
-                               &lt;option&gt;
-                               <br></br>
-                                { name }
-                               <br></br>
-                               &lt;/option&gt;
-                               </section>
-                               :
-                               "when ready, your results will appear here"
+                <Checkbox type="text" name="pTag"
+                // onClick={e => setName(e.target.value)}
+                onClick={e => console.log(e.target)}
+
+                />
+
+              <InputLabel> Enter text to be converted </InputLabel> 
+                <Input type="text" placeholder='enter text...' value={name} name="name" onChange={e => setName(e.target.value)}/>
+                
+                <Button type="submit" variant="contained" color="primary">
+                        Convert to Tag
+                </Button>
+              </FormGroup>
+
+              <Button variant="contained" color="primary" 
+              onClick={(e) => {console.log("value of e.target => ", e.target)}}
+                            type="copy"> Copy Text to clipboard
+              </Button>
+              <br>
+              </br>
+              { confirmed ? 
+                    <section name={name}>
+                    &lt;option&gt;
+                    <br></br>
+                    { name }
+                    <br></br>
+                    &lt;/option&gt;
+                    </section>
+                    :
+                    <Box color="primary">
+
+                    when ready, your results will appear here
+                    </Box>
                            }
-                           
         </div>
         {/* </Box> */}
         <Elements/>
         <ElementsData/>
         <CopyToClip/>
-        </Box>
+        {/* </Box> */}
         </Container>
         </Fragment>
     )
