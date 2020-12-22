@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+    // entry: './src/index.js',
     entry: './src/index.js',
     mode: 'development',
     module: {
@@ -38,6 +39,6 @@ module.exports = {
         new HtmlWebpackPlugin({
          template: path.resolve( __dirname, 'public/index.html' ),
          filename: 'index.html'
-      }), new webpack.NoEmitOnErrorsPlugin()
+      })
 ]
 };

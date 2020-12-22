@@ -1,8 +1,11 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+// var compiler = webpack(webpackConfig);
+
 
 module.exports = {
+    // entry: './src/index.js',
     entry: './src/index.js',
     mode: 'development',
     module: {
@@ -27,10 +30,10 @@ module.exports = {
     },
     devServer: {
         contentBase: path.join(__dirname, 'public/'),
-        port: 3005,
-        publicPath: 'http://localhost:3000/dist/'
+        port: 3000,
+        publicPath: 'http://localhost:3000/dist/'//,
+        // hot: true 
         // ,
-        // hot: true,
         // hotOnly: true
     },
     plugins: [
@@ -40,4 +43,10 @@ module.exports = {
          filename: 'index.html'
       }), new webpack.NoEmitOnErrorsPlugin()
 ]
+// ,
+// app.use(require("webpack-dev-middleware")(compiler, {
+//     noInfo: true, publicPath: webpackConfig.output.publicPath
+// })),
+
+
 };
