@@ -2,6 +2,11 @@ import React, { Fragment, useState, useEffect }from 'react'
 import Elements from '../components/Elements'
 import ElementsData from './ElementsData'
 import {CopyToClipboard} from 'react-copy-to-clipboard';
+import Button from '@material-ui/core/Button';
+import Box from '@material-ui/core/Box';
+import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
+
 import CopyToClip from './CopyToClip'
 // import PropTypes from 'prop-types'
 // import {setState} from re
@@ -9,9 +14,6 @@ import CopyToClip from './CopyToClip'
 // useEffect(() => {
         //         setState(props.meals);
         //     }, [props.meals]);
-        
-        
-        
     const ConverterPage = () => {
     // var [name, setName] = useState("")
     // var [confirmed, setConfirmed] = useState(false)
@@ -28,23 +30,26 @@ const [copied, setCopied] = useState(false)
     const handleSubmit = (e) => {
         e.preventDefault();
         setConfirmed(true)
-        console.log('🚀 ~ file: ConverterPage.js ~ line 8 ~ onSubmit', name)
+        console.log('🚀 ~ file: ConverterPage.js ~ line 8 ~ onSubmit', "CLICKED")
     }
     return (
         <Fragment> 
+        <Container>
             <h1>COVERTER PAGE</h1>
+            <Box component="span" m={1} color="text.primary">
+            {/* <Box color="text.primary" clone></Box> */}
         <div>
               <form id='new-recipe-form' onSubmit={handleSubmit}>
                 <label> Enter text to be converted </label> 
                     <input type="text" placeholder='enter text...' value={name} name="name" onChange={e => setName(e.target.value)}/>
-                        <button type="submit">Convert to Tag
-                        </button>
+                    <Button type="submit" variant="contained" color="primary">
+                        Convert to Tag
+                    </Button>
               </form>
 
-                        <button onClick={(e) => {console.log("value of e.target => ", e.target)}}
-                            type="copy">Copy Text to clipboad
-                        </button>
-                            
+                        <Button variant="contained" color="primary" onClick={(e) => {console.log("value of e.target => ", e.target)}}
+                            type="copy">Copy Text to clipboard
+                        </Button>
                            <br>
                            </br>
                            { confirmed ? 
@@ -58,10 +63,14 @@ const [copied, setCopied] = useState(false)
                                :
                                "when ready, your results will appear here"
                            }
+                           
         </div>
+        {/* </Box> */}
         <Elements/>
         <ElementsData/>
         <CopyToClip/>
+        </Box>
+        </Container>
         </Fragment>
     )
 }
