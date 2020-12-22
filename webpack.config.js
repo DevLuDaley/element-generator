@@ -30,6 +30,7 @@ module.exports = {
         contentBase: path.join(__dirname, 'public/'),
         port: 3005,
         publicPath: 'http://localhost:3000/dist/',
+        hot: true,
         hotOnly: true
     },
     plugins: [
