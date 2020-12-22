@@ -193,3 +193,13 @@ npm i redux-thunk
 
 
     npm install --save react react-copy-to-clipboard
+    npm install @material-ui/core
+
+
+# material ui add to html page
+    ```html
+
+     name="viewport"
+  content="minimum-scale=1, initial-scale=1, width=device-width"
+
+    ```
