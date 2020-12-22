@@ -2,6 +2,8 @@ import React, { Fragment, Component, useState, useEffect }from 'react'
 import Elements from './Elements'
 import ElementsData from './ElementsData'
 import {CopyToClipboard} from 'react-copy-to-clipboard';
+import Button from '@material-ui/core/Button';
+
 
     class CopyToClip extends Component {
         constructor(props) {
@@ -34,7 +36,7 @@ import {CopyToClipboard} from 'react-copy-to-clipboard';
  
         <CopyToClipboard text={this.state.value}
           onCopy={() => this.setState({copied: true})}>
-          <button>Copy to clipboard with button</button>
+          <Button variant="contained" color="primary">Copy to clipboard with button</Button>
         </CopyToClipboard>
  
         {this.state.copied ? <span style={{color: 'red'}}>Copied.</span> : null}
