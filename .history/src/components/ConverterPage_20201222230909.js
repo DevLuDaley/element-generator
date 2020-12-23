@@ -47,16 +47,16 @@ import CopyToClip from './CopyToClip'
         <div>
             <FormGroup id='convert-to-element-form' onSubmit={handleSubmit}>
 
-                {/* <Checkbox type="text" name="pTag"
+                <Checkbox type="text" name="pTag"
                 // onClick={e => setName(e.target.value)}
                 onClick={e => console.log(e.target)}
 
-                /> */}
+                />
 
               <InputLabel> Enter text to be converted </InputLabel> 
                 <Input type="text" placeholder='enter text...' value={name} name="name" onChange={e => setName(e.target.value)}/>
                 
-                <Button type="submit" variant="raised" color="primary">
+                <Button type="submit" variant="contained" color="primary">
                         Convert to Tag
                 </Button>
               </FormGroup>

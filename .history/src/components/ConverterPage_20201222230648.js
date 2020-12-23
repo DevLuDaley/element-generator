@@ -45,26 +45,26 @@ import CopyToClip from './CopyToClip'
             {/* <Box component="span" m={1} color="text.primary"> */}
             {/* <Box color="text.primary" clone></Box> */}
         <div>
-            <FormGroup id='convert-to-element-form' onSubmit={handleSubmit}>
+            <MuiFormGroup id='convert-to-element-form' onSubmit={handleSubmit}>
 
-                {/* <Checkbox type="text" name="pTag"
+                <Checkbox type="text" name="pTag"
                 // onClick={e => setName(e.target.value)}
                 onClick={e => console.log(e.target)}
 
-                /> */}
+                />
 
               <InputLabel> Enter text to be converted </InputLabel> 
                 <Input type="text" placeholder='enter text...' value={name} name="name" onChange={e => setName(e.target.value)}/>
                 
-                <Button type="submit" variant="raised" color="primary">
+                <Button type="submit" variant="contained" color="primary">
                         Convert to Tag
                 </Button>
-              </FormGroup>
+              </MuiFormGroup>
 
-              {/* <Button variant="contained" color="primary" 
+              <Button variant="contained" color="primary" 
               onClick={(e) => {console.log("value of e.target => ", e.target)}}
                             type="copy"> Copy Text to clipboard
-              </Button> */}
+              </Button>
               <br>
               </br>
               { confirmed ? 

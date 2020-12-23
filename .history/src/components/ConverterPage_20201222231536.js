@@ -56,9 +56,9 @@ import CopyToClip from './CopyToClip'
               <InputLabel> Enter text to be converted </InputLabel> 
                 <Input type="text" placeholder='enter text...' value={name} name="name" onChange={e => setName(e.target.value)}/>
                 
-                <Button type="submit" variant="raised" color="primary">
+                <button type="submit" variant="contained" color="primary">
                         Convert to Tag
-                </Button>
+                </button>
               </FormGroup>
 
               {/* <Button variant="contained" color="primary" 
