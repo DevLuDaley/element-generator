@@ -23,7 +23,7 @@ const elementsArray = [
 {th: "<th> </th>"},
 {pre: "<pre> </pre>"},
 {p: "<p> </p>"},
-{nav: "<nav> </nav>"},
+{nav: "<nav> </nav>",}
 {main: "<main> </main>"},
 {header: "<header> </header>"},
 {h1: "<h1> </h1>"},

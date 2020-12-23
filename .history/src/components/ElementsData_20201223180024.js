@@ -2,7 +2,7 @@ import React, {Fragment, useState} from 'react'
 // &lt;
 // &gt;
 const ElementData = () => {
-const elementsArray = [
+export const elementsArray = [
 // "&lt;abbr>&lt;/abbr&gt;",
 {div: "<div> </div>"},
 {span: "<span> </span>"},
@@ -21,9 +21,9 @@ const elementsArray = [
 {tbody: "<tbody> </tbody>"},
 {tr: "<tr> </tr>"},
 {th: "<th> </th>"},
-{pre: "<pre> </pre>"},
+{pre: <"pre> </pre>"},
 {p: "<p> </p>"},
-{nav: "<nav> </nav>"},
+{nav: "<nav> </nav>",}
 {main: "<main> </main>"},
 {header: "<header> </header>"},
 {h1: "<h1> </h1>"},
@@ -54,4 +54,4 @@ return (
         {" " + endTag}
     </Fragment>  );
 }
-export default ElementData;
+// export ElementData;
