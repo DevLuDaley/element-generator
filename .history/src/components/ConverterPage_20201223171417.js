@@ -45,7 +45,7 @@ import CopyToClip from './CopyToClip'
             {/* <Box component="span" m={1} color="text.primary"> */}
             {/* <Box color="text.primary" clone></Box> */}
         <div>
-            <FormGroup id='convert-to-element-form' onSubmit={handleSubmit}>
+            <FormGroup margin="dense" id='convert-to-element-form' onSubmit={handleSubmit}>
 
                 {/* <Checkbox type="text" name="pTag"
                 // onClick={e => setName(e.target.value)}
@@ -68,7 +68,7 @@ import CopyToClip from './CopyToClip'
               </Button> */}
               <br>
               </br>
-              { !confirmed ? 
+              { confirmed ? 
                     <section name={name}>
                     &lt;option&gt;
                     <br></br>

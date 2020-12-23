@@ -68,7 +68,7 @@ import CopyToClip from './CopyToClip'
               </Button> */}
               <br>
               </br>
-              { !confirmed ? 
+              { confirmed ? 
                     <section name={name}>
                     &lt;option&gt;
                     <br></br>

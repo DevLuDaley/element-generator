@@ -40,7 +40,7 @@ import CopyToClip from './CopyToClip'
     }
     return (
         <Fragment> 
-        <Container maxWidth="sm">
+        <Container max>
             <h1>COVERTER PAGE</h1>
             {/* <Box component="span" m={1} color="text.primary"> */}
             {/* <Box color="text.primary" clone></Box> */}
@@ -56,7 +56,7 @@ import CopyToClip from './CopyToClip'
               <InputLabel> Enter text to be converted </InputLabel> 
                 <Input type="text" placeholder='enter text...' value={name} name="name" onChange={e => setName(e.target.value)}/>
                 
-                <Button onClick={(e) => {console.log("value of e.target => ", e.target)}} type="submit" variant="raised" color="primary">
+                <Button type="submit" variant="raised" color="primary">
                         Convert to Tag
                 </Button>
               </FormGroup>
@@ -68,7 +68,7 @@ import CopyToClip from './CopyToClip'
               </Button> */}
               <br>
               </br>
-              { !confirmed ? 
+              { confirmed ? 
                     <section name={name}>
                     &lt;option&gt;
                     <br></br>
