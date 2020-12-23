@@ -261,7 +261,7 @@ module.exports = {
 ```
 
 ```js
-// webpack.config // after fixing hot module reload
+// webpack.config
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -292,7 +292,7 @@ module.exports = {
     devServer: {
         contentBase: path.join(__dirname, 'public/'),
         port: 3005,
-        publicPath: 'http://localhost:3005/dist/'
+        publicPath: 'http://localhost:3000/dist/'
         // ,
         // hot: true,
         // hotOnly: true
