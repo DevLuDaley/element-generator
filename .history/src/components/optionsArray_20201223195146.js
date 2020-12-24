@@ -42,7 +42,7 @@ export const optionsArray =
 
 const firstNames = optionsArray.map( e => e)
 
-console.log("first names", firstNames.keys)
+console.log("first names", firstNames)
 // const wordSplit = elementsArray[1].split(" ")
 // const wordSplit = elementsArray //.split(" ")
 // const [startTag, endTag] =  wordSplit
