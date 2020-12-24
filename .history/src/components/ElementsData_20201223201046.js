@@ -5,7 +5,7 @@ import {optionsArray} from './optionsArray'
 const ElementData = () => {
 
 // const wordSplit = elementsArray[1].split(" ")
-const wordSplit = optionsArray //.split(" ")
+const wordSplit = elementsArray //.split(" ")
 // const [startTag, endTag] =  wordSplit
 // console.log("wordSplit", wordSplit)
 // console.log("wordSplit[0]", wordSplit[0]["div"])
@@ -13,7 +13,7 @@ return (
     <Fragment>
     <h1>ELEMENTS DATA</h1>
     {optionsArray ? optionsArray.map(op => <p>
-    {op.key} => {op.value}
+    {op.key}
     </p>
     ): null}
         {/* {elementsArray[1]} */}

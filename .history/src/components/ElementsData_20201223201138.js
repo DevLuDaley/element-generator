@@ -13,7 +13,8 @@ return (
     <Fragment>
     <h1>ELEMENTS DATA</h1>
     {optionsArray ? optionsArray.map(op => <p>
-    {op.key} => {op.value}
+    {op.key}
+    {op.value}
     </p>
     ): null}
         {/* {elementsArray[1]} */}
