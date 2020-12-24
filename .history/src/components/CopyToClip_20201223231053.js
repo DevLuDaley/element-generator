@@ -44,12 +44,12 @@ import Button from '@material-ui/core/Button';
 { this.props.newElement ?   
         <CopyToClipboard text={this.props.newElement}
           onCopy={() => this.setState({copied: true})}>
-          <Button onClick={this.props.newElement ? <span style={{color: 'red'}}>Copied.</span> : null} variant="contained" color="primary">Copy to clipboard with button</Button>
+          <Button variant="contained" color="primary">Copy to clipboard with button</Button>
         </CopyToClipboard>
         : null
         }
  
-        {/* {this.props.newElement ? <span style={{color: 'red'}}>Copied.</span> : null} */}
+        {this.props.newElement ? <span style={{color: 'red'}}>Copied.</span> : null}
             </div>
         </Fragment> 
         
