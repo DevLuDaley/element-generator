@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useEffect }from 'react'
 import Elements from '../components/Elements'
 import ElementsData from './ElementsData'
-import {optionsArray} from './optionsArray'
+import elementsArray from './ElementsData'
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 // import Button from '@material-ui/core/Button';
 // import Box from '@material-ui/core/Box';
@@ -33,19 +33,13 @@ import CopyToClip from './CopyToClip'
     const [type, setType] = useState('')
     const [value, setValue] = useState('')
     const [copied, setCopied] = useState(false)
-    // const [options, setOptions] = useState(elementsArray)
+    const [options, setOptions] = useState(elementsArray)
     // const [] = setState([])
-
-    // console.log(elementsArray)
     const handleSubmit = (e) => {
         e.preventDefault();
         setConfirmed(true)
         console.log('🚀 ~ file: ConverterPage.js ~ line 8 ~ onSubmit', "CLICKED")
     }
-
-    console.log("YUP", optionsArray[1])
-    console.log("YUP", optionsArray[5]);
-    console.log("KEYS", optionsArray.map(ele => ele.value));
     return (
         <Fragment> 
         <Container maxWidth="sm">
@@ -63,10 +57,10 @@ import CopyToClip from './CopyToClip'
         //   value={1}
           onChange={handleSubmit}
         >
-    { optionsArray ? 
+    {/* { elementsArray ? 
         <p> WORDS </p>
         : "null"
-    } 
+    } */}
             
 
           <MenuItem >Ten</MenuItem>

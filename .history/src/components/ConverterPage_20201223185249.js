@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useEffect }from 'react'
 import Elements from '../components/Elements'
 import ElementsData from './ElementsData'
-import {optionsArray} from './optionsArray'
+import elementsArray from './ElementsData'
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 // import Button from '@material-ui/core/Button';
 // import Box from '@material-ui/core/Box';
@@ -33,19 +33,12 @@ import CopyToClip from './CopyToClip'
     const [type, setType] = useState('')
     const [value, setValue] = useState('')
     const [copied, setCopied] = useState(false)
-    // const [options, setOptions] = useState(elementsArray)
     // const [] = setState([])
-
-    // console.log(elementsArray)
     const handleSubmit = (e) => {
         e.preventDefault();
         setConfirmed(true)
         console.log('🚀 ~ file: ConverterPage.js ~ line 8 ~ onSubmit', "CLICKED")
     }
-
-    console.log("YUP", optionsArray[1])
-    console.log("YUP", optionsArray[5]);
-    console.log("KEYS", optionsArray.map(ele => ele.value));
     return (
         <Fragment> 
         <Container maxWidth="sm">
@@ -53,32 +46,21 @@ import CopyToClip from './CopyToClip'
             {/* <Box component="span" m={1} color="text.primary"> */}
             {/* <Box color="text.primary" clone></Box> */}
         <div>
-
-
- <FormControl >
-        <InputLabel id="demo-simple-select-label">Element-Type</InputLabel>
+            <FormGroup id='convert-to-element-form' onSubmit={handleSubmit}>
+            {/* {elementsArray ? elementsArray.map(ele => ele): null} */}
+             <FormControl className={classes.formControl}>
+        <InputLabel id="demo-simple-select-label">Age</InputLabel>
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-        //   value={1}
-          onChange={handleSubmit}
+          value={age}
+          onChange={handleChange}
         >
-    { optionsArray ? 
-        <p> WORDS </p>
-        : "null"
-    } 
-            
-
-          <MenuItem >Ten</MenuItem>
-          {/* <MenuItem value={10}>Ten</MenuItem> */}
-          {/* <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem> */}
+          <MenuItem value={10}>Ten</MenuItem>
+          <MenuItem value={20}>Twenty</MenuItem>
+          <MenuItem value={30}>Thirty</MenuItem>
         </Select>
       </FormControl>
-
-
-            <FormGroup id='convert-to-element-form' onSubmit={handleSubmit}>
-
 
 
                 {/* <Checkbox type="text" name="pTag"

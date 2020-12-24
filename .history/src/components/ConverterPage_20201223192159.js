@@ -44,8 +44,7 @@ import CopyToClip from './CopyToClip'
     }
 
     console.log("YUP", optionsArray[1])
-    console.log("YUP", optionsArray[5]);
-    console.log("KEYS", optionsArray.map(ele => ele.value));
+    console.log("YUP", optionsArray[3]);
     return (
         <Fragment> 
         <Container maxWidth="sm">

@@ -1,7 +1,6 @@
 import React, { Fragment, useState, useEffect }from 'react'
 import Elements from '../components/Elements'
 import ElementsData from './ElementsData'
-import {optionsArray} from './optionsArray'
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 // import Button from '@material-ui/core/Button';
 // import Box from '@material-ui/core/Box';
@@ -9,7 +8,7 @@ import {CopyToClipboard} from 'react-copy-to-clipboard';
 // import Grid from '@material-ui/core/Grid';
 // import { Input } from '@material-ui/core/';
 // import { Checkbox } from '@material-ui/core/';
-import { Grid, Container, Box, FormControl, FormGroup, Modal, Input, InputLabel, Button, Checkbox, Select, MenuItem } from '@material-ui/core';
+import { Grid, Container, Box, FormControl, FormGroup, Modal, Input, InputLabel, Button, Checkbox } from '@material-ui/core';
 // import  from '@material-ui/core/InputLabel';
 
 
@@ -33,53 +32,20 @@ import CopyToClip from './CopyToClip'
     const [type, setType] = useState('')
     const [value, setValue] = useState('')
     const [copied, setCopied] = useState(false)
-    // const [options, setOptions] = useState(elementsArray)
     // const [] = setState([])
-
-    // console.log(elementsArray)
     const handleSubmit = (e) => {
         e.preventDefault();
         setConfirmed(true)
         console.log('🚀 ~ file: ConverterPage.js ~ line 8 ~ onSubmit', "CLICKED")
     }
-
-    console.log("YUP", optionsArray[1])
-    console.log("YUP", optionsArray[5]);
-    console.log("KEYS", optionsArray.map(ele => ele.value));
     return (
         <Fragment> 
-        <Container maxWidth="sm">
+        <Container>
             <h1>COVERTER PAGE</h1>
             {/* <Box component="span" m={1} color="text.primary"> */}
             {/* <Box color="text.primary" clone></Box> */}
         <div>
-
-
- <FormControl >
-        <InputLabel id="demo-simple-select-label">Element-Type</InputLabel>
-        <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-        //   value={1}
-          onChange={handleSubmit}
-        >
-    { optionsArray ? 
-        <p> WORDS </p>
-        : "null"
-    } 
-            
-
-          <MenuItem >Ten</MenuItem>
-          {/* <MenuItem value={10}>Ten</MenuItem> */}
-          {/* <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem> */}
-        </Select>
-      </FormControl>
-
-
             <FormGroup id='convert-to-element-form' onSubmit={handleSubmit}>
-
-
 
                 {/* <Checkbox type="text" name="pTag"
                 // onClick={e => setName(e.target.value)}
@@ -90,13 +56,12 @@ import CopyToClip from './CopyToClip'
               <InputLabel> Enter text to be converted </InputLabel> 
                 <Input type="text" placeholder='enter text...' value={name} name="name" onChange={e => setName(e.target.value)}/>
                 
-                <Button onClick={handleSubmit} type="submit" variant="raised" color="primary">
+                <Button type="submit" variant="raised" color="primary">
                         Convert to Tag
                 </Button>
               </FormGroup>
 
-              {/* <Button variant="contained" 
-              color="primary" 
+              {/* <Button variant="contained" color="primary" 
               onClick={(e) => {console.log("value of e.target => ", e.target)}}
                             type="copy"> Copy Text to clipboard
               </Button> */}
