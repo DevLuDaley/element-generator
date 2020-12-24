@@ -43,8 +43,8 @@ const elementsArray =
 // const wordSplit = elementsArray[1].split(" ")
 const wordSplit = elementsArray //.split(" ")
 // const [startTag, endTag] =  wordSplit
-// console.log("wordSplit", wordSplit)
-// console.log("wordSplit[0]", wordSplit[0]["div"])
+console.log("wordSplit", wordSplit)
+console.log("wordSplit[0]", wordSplit[0]["div"])
 return (
     <Fragment>
     <h1>ELEMENTS DATA</h1>
@@ -57,4 +57,4 @@ return (
         {" " + endTag} */}
     </Fragment>  );
 }
-export default ElementData;
+export default elementsArray;
