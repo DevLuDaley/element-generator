@@ -78,7 +78,7 @@ const ConverterPage = (e) => {
                         Convert to Tag
                 </Button>
 
-                <br></br>
+                
                     <CopyToClip newElement={newElement} confirmed={confirmed}/>
               </FormGroup>
               {/* <Button variant="contained" 
