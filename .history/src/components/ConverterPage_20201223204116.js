@@ -18,13 +18,13 @@ const ConverterPage = () => {
     const handleChange = (e) => {
         e.preventDefault();
         setConfirmed(true)
-        console.log('🚀 ~ file: ConverterPage.js ~ line 21 ~ onSubmit', "HANDLE CHANGE")
+        console.log('🚀 ~ file: ConverterPage.js ~ line 8 ~ onSubmit', "CLICKED")
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
         setConfirmed(true)
-        console.log('🚀 ~ file: ConverterPage.js ~ line 27 ~ onSubmit', "HANDLE SUBMIT")
+        console.log('🚀 ~ file: ConverterPage.js ~ line 8 ~ onSubmit', "CLICKED")
     }
 
     return (
@@ -32,27 +32,22 @@ const ConverterPage = () => {
         <Container maxWidth="sm">
             <h1>COVERTER PAGE</h1>
         <div>
-            <FormControl>
-                <InputLabel id="demo-simple-select-label">
-                Element-Type</InputLabel>
-            </FormControl>
-
             <FormControl >
         {/* <InputLabel id="demo-simple-select-label">Element-Type</InputLabel> */}
-                <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={optionsArray[0].value}
-                onChange={handleChange}
-                >
-                    { optionsArray ?
-                        optionsArray.map(option => <MenuItem value={option.v} key={Math.floor(Math.random() * 10) +500}>
-                            {option.k}
-                        </MenuItem>)
-                        : "null"
-                    }
-                </Select>
-            </FormControl>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={optionsArray[0].value}
+          onChange={handleSubmit}
+        >
+    { optionsArray ?
+        optionsArray.map(option => <MenuItem value={option.value}>
+            {option.option-key}
+        </MenuItem>)
+        : "null"
+    }
+        </Select>
+      </FormControl>
 
             <FormGroup id='convert-to-element-form' onSubmit={handleSubmit}>
 
@@ -67,7 +62,7 @@ const ConverterPage = () => {
               {/* <InputLabel> Enter text to be converted </InputLabel> 
                 <Input type="text" placeholder='enter text...' value={name} name="name" onChange={e => setName(e.target.value)}/> */}
                 
-                <Button onClick={handleSubmit} type="submit" variant="contained" color="primary">
+                <Button onClick={handleSubmit} type="submit" variant="raised" color="primary">
                         Convert to Tag
                 </Button>
               </FormGroup>
@@ -89,6 +84,7 @@ const ConverterPage = () => {
                     </section>
                     :
                     <Box color="primary">
+
                     when ready, your results will appear here
                     </Box>
                            }
@@ -96,7 +92,7 @@ const ConverterPage = () => {
         {/* </Box> */}
         <Elements/>
         <CopyToClip/>
-        {/* <ElementsData/> */}
+        <ElementsData/>
         {/* </Box> */}
         </Container>
         </Fragment>

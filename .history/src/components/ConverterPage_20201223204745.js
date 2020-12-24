@@ -11,7 +11,7 @@ import CopyToClip from './CopyToClip'
 const ConverterPage = () => {
     var [name, setName] = useState("")
     var [confirmed, setConfirmed] = useState(false)
-    const [type, setType] = useState('')
+    // const [type, setType] = useState('')
     const [value, setValue] = useState('')
     const [copied, setCopied] = useState(false)
 
@@ -32,27 +32,22 @@ const ConverterPage = () => {
         <Container maxWidth="sm">
             <h1>COVERTER PAGE</h1>
         <div>
-            <FormControl>
-                <InputLabel id="demo-simple-select-label">
-                Element-Type</InputLabel>
-            </FormControl>
-
             <FormControl >
         {/* <InputLabel id="demo-simple-select-label">Element-Type</InputLabel> */}
-                <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={optionsArray[0].value}
-                onChange={handleChange}
-                >
-                    { optionsArray ?
-                        optionsArray.map(option => <MenuItem value={option.v} key={Math.floor(Math.random() * 10) +500}>
-                            {option.k}
-                        </MenuItem>)
-                        : "null"
-                    }
-                </Select>
-            </FormControl>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={optionsArray[0].value}
+          onChange={handleChange}
+        >
+    { optionsArray ?
+        optionsArray.map(option => 
+        <MenuItem value={option.value} > {option.option-key}
+        </MenuItem>)
+        : "null"
+    }
+        </Select>
+      </FormControl>
 
             <FormGroup id='convert-to-element-form' onSubmit={handleSubmit}>
 
@@ -67,7 +62,7 @@ const ConverterPage = () => {
               {/* <InputLabel> Enter text to be converted </InputLabel> 
                 <Input type="text" placeholder='enter text...' value={name} name="name" onChange={e => setName(e.target.value)}/> */}
                 
-                <Button onClick={handleSubmit} type="submit" variant="contained" color="primary">
+                <Button onClick={handleSubmit} type="submit" variant="raised" color="primary">
                         Convert to Tag
                 </Button>
               </FormGroup>
@@ -96,7 +91,7 @@ const ConverterPage = () => {
         {/* </Box> */}
         <Elements/>
         <CopyToClip/>
-        {/* <ElementsData/> */}
+        <ElementsData/>
         {/* </Box> */}
         </Container>
         </Fragment>

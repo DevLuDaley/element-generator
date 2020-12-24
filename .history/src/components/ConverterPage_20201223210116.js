@@ -32,27 +32,23 @@ const ConverterPage = () => {
         <Container maxWidth="sm">
             <h1>COVERTER PAGE</h1>
         <div>
-            <FormControl>
-                <InputLabel id="demo-simple-select-label">
-                Element-Type</InputLabel>
-            </FormControl>
-
             <FormControl >
         {/* <InputLabel id="demo-simple-select-label">Element-Type</InputLabel> */}
-                <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={optionsArray[0].value}
-                onChange={handleChange}
-                >
-                    { optionsArray ?
-                        optionsArray.map(option => <MenuItem value={option.v} key={Math.floor(Math.random() * 10) +500}>
-                            {option.k}
-                        </MenuItem>)
-                        : "null"
-                    }
-                </Select>
-            </FormControl>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={optionsArray[0].value}
+          onChange={handleSubmit}
+        >
+    { optionsArray ?
+        optionsArray.map(option => <MenuItem value={option.value} key={math.floor}>
+            {option.key}
+        </MenuItem>)
+        : "null"
+    }
+        {console.log('🚀 ~ file: ConverterPage.js ~ line 45 ~ ConverterPage ~ option.id', optionsArray[0].index)}
+        </Select>
+      </FormControl>
 
             <FormGroup id='convert-to-element-form' onSubmit={handleSubmit}>
 

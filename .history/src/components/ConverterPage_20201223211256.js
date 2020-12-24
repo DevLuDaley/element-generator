@@ -29,7 +29,7 @@ const ConverterPage = () => {
 
     return (
         <Fragment> 
-        <Container maxWidth="sm">
+        <Container >
             <h1>COVERTER PAGE</h1>
         <div>
             <FormControl>

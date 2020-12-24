@@ -32,13 +32,8 @@ const ConverterPage = () => {
         <Container maxWidth="sm">
             <h1>COVERTER PAGE</h1>
         <div>
-            <FormControl>
-                <InputLabel id="demo-simple-select-label">
-                Element-Type</InputLabel>
-            </FormControl>
-
             <FormControl >
-        {/* <InputLabel id="demo-simple-select-label">Element-Type</InputLabel> */}
+        <InputLabel id="demo-simple-select-label">Element-Type</InputLabel>
                 <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
