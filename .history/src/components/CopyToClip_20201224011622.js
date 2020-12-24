@@ -2,7 +2,7 @@ import React, { Fragment, Component, useState, useEffect }from 'react'
 import Elements from './Elements'
 import ElementsData from './ElementsData'
 import {CopyToClipboard} from 'react-copy-to-clipboard';
-import {Button, FormGroup} from '@material-ui/core';
+import Button from '@material-ui/core/Button';
 
 
     class CopyToClip extends Component {
@@ -46,15 +46,13 @@ import {Button, FormGroup} from '@material-ui/core';
         </CopyToClipboard> */}
 { this.props.newElement ?   
         
-        <CopyToClipboard placeholder="hi" text={this.props.newElement}
+        <CopyToClipboard text={this.props.newElement}
           onCopy={() => this.setState({copied: true})}>
-          
-            <Button onClick={this.props.newElement ? <span style={{color: 'red'}}>Copied.</span> : null} variant="contained" color="primary">Copy to clipboard
-            </Button>
-        
+          <Button onClick={this.props.newElement ? <span style={{color: 'red'}}>Copied.</span> : null} variant="contained" color="primary">Copy to clipboard</Button>
         </CopyToClipboard>
-        : "Click Convert to see your new HTML Element!"
+        : null
         }
+ 
         {/* {this.props.newElement ? <span style={{color: 'red'}}>Copied.</span> : null} */}
             </div>
         </Fragment> 

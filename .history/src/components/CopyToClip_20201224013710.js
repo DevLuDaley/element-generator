@@ -51,6 +51,8 @@ import {Button, FormGroup} from '@material-ui/core';
           
             <Button onClick={this.props.newElement ? <span style={{color: 'red'}}>Copied.</span> : null} variant="contained" color="primary">Copy to clipboard
             </Button>
+
+            <Button>Clear</Button>
         
         </CopyToClipboard>
         : "Click Convert to see your new HTML Element!"

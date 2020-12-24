@@ -48,13 +48,11 @@ import {Button, FormGroup} from '@material-ui/core';
         
         <CopyToClipboard placeholder="hi" text={this.props.newElement}
           onCopy={() => this.setState({copied: true})}>
-          
-            <Button onClick={this.props.newElement ? <span style={{color: 'red'}}>Copied.</span> : null} variant="contained" color="primary">Copy to clipboard
-            </Button>
-        
+          <Button onClick={this.props.newElement ? <span style={{color: 'red'}}>Copied.</span> : null} variant="contained" color="primary">Copy to clipboard</Button>
         </CopyToClipboard>
-        : "Click Convert to see your new HTML Element!"
+        : null
         }
+ 
         {/* {this.props.newElement ? <span style={{color: 'red'}}>Copied.</span> : null} */}
             </div>
         </Fragment> 

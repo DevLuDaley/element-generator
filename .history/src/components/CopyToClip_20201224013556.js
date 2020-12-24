@@ -53,7 +53,7 @@ import {Button, FormGroup} from '@material-ui/core';
             </Button>
         
         </CopyToClipboard>
-        : "Click Convert to see your new HTML Element!"
+        : "Click Convert to see your new HTML Element"
         }
         {/* {this.props.newElement ? <span style={{color: 'red'}}>Copied.</span> : null} */}
             </div>
