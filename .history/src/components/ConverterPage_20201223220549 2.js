@@ -1,5 +1,4 @@
 import React, { Fragment, useState, useEffect }from 'react'
-import { connect } from 'react-redux'
 import { Grid, Container, Box, FormControl, FormGroup, Modal, Input, InputLabel, Button, Checkbox, Select, MenuItem } from '@material-ui/core';
 
 import Elements from '../components/Elements'
@@ -7,7 +6,6 @@ import ElementsData from './ElementsData'
 import {optionsArray} from './optionsArray'
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 import CopyToClip from './CopyToClip'
-import {elementCopy} from './CopyToClip'
 
 
 const ConverterPage = (e) => {
@@ -15,7 +13,6 @@ const ConverterPage = (e) => {
     var [selectedElement, setSelectedElement] = useState(optionsArray[0].v)
     const [confirmed, setConfirmed] = useState(false)
     const [selected, setSelected] = useState(false)
-    const [newElement, setNewElement] = useState("")
     // const [type, setType] = useState('')
     // const [value, setValue] = useState('')
     const [copied, setCopied] = useState(false)
@@ -24,6 +21,8 @@ const ConverterPage = (e) => {
         e.preventDefault();
         setSelectedElement(e.target.value)
         setSelected(true)
+        console.log('🚀 ~ file: ConverterPage.js ~ line 21 ~ onSubmit', "HANDLE CHANGE", e.target.value)
+        // Select.value = "p"
     }
 
     const handleSubmit = (e) => {
@@ -31,45 +30,51 @@ const ConverterPage = (e) => {
         setConfirmed(true)
         const wordSplit = selectedElement.split(" ")
         const [startTag, endTag] =  wordSplit
-        setNewElement(`${startTag} ${name} ${endTag}`)
+        const newElement = [`${startTag} ${name} ${endTag}`]
+        console.log('🚀 ~ file: ConverterPage.js ~ line 32 ~ onSubmit', "newElement", newElement)
+        // console.log('🚀 ~ file: ConverterPage.js ~ line 27 ~ onSubmit', "HANDLE SUBMIT")
     }
 
-    const theme = {
-    spacing: 8,
-    }
     return (
         <Fragment> 
-        
         <Container maxWidth="sm">
-            <h1>HTML ELEMENT CREATOR</h1>
+            <h1>COVERTER PAGE</h1>
         <div>
             {/* <FormControl>
                 <InputLabel id="demo-simple-select-label">
                 Element-Type</InputLabel>
             </FormControl> */}
 
-            <FormControl>
+            <FormControl >
                 <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
+                    // value={optionsArray[0].v}
                     value={selectedElement}
                     onChange={handleChange}
                     >
-                    {/* {console.log("selectedElement", selectedElement)} */}
+                    {console.log("selectedElement", selectedElement)}
                         { optionsArray ?
                             optionsArray.map(option => <MenuItem value={option.v} key={option.k}>
                                 {option.k}
                             </MenuItem>)
                             : "null"            }
                 </Select>
-                <br></br>
-                <br></br>
             </FormControl>
             <FormControl>
                 <InputLabel></InputLabel>
                 <Input onChange={e => setName(e.target.value)}></Input>
             </FormControl>
+{console.log(name)}
             <FormGroup id='convert-to-element-form' onSubmit={handleSubmit}>
+
+
+
+                {/* <Checkbox type="text" name="pTag"
+                // onClick={e => setName(e.target.value)}
+                onClick={e => console.log(e.target)}
+
+                /> */}
 
               {/* <InputLabel> Enter text to be converted </InputLabel> 
                 <Input type="text" placeholder='enter text...' value={name} name="name" onChange={e => setName(e.target.value)}/> */}
@@ -77,8 +82,8 @@ const ConverterPage = (e) => {
                 <Button onClick={handleSubmit} type="submit" variant="contained" color="primary">
                         Convert to Tag
                 </Button>
-                    <CopyToClip newElement={newElement} confirmed={confirmed}/>
               </FormGroup>
+
               {/* <Button variant="contained" 
               color="primary" 
               onClick={(e) => {console.log("value of e.target => ", e.target)}}
@@ -86,7 +91,7 @@ const ConverterPage = (e) => {
               </Button> */}
               <br>
               </br>
-              {/* { confirmed ? 
+              { confirmed ? 
                     <section name={name}>
                     &lt;option&gt;
                     <br></br>
@@ -98,13 +103,31 @@ const ConverterPage = (e) => {
                     <Box color="primary">
                     when ready, your results will appear here
                     </Box>
-                           } */}
+                           }
         </div>
+        {/* </Box> */}
+        <Elements/>
+        <CopyToClip yup={handleSubmit.newElement}/>
+        {/* <ElementsData/> */}
+        {/* </Box> */}
         </Container>
         </Fragment>
     )
 }
 
 
+// const mapStateToProps = state => {
+//     // console.log('state.loadRecipesReducer 1', state.loadRecipesReducer);
+//     // console.log('state.loadRecipesReducer.loadedRecipes 2', state.loadRecipesReducer.loadedRecipes);
+//     // const loadResults = state.loadRecipesReducer.loadedRecipes
+
+//     // loadResults.map(load => load.title)
+//     return(
+//         {
+//             // meals: state.loadRecipesReducer.meals,
+//             name: state.name
+//         }
+//     )
+// }
 
 export default ConverterPage

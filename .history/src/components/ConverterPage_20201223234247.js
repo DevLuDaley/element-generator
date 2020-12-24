@@ -24,6 +24,8 @@ const ConverterPage = (e) => {
         e.preventDefault();
         setSelectedElement(e.target.value)
         setSelected(true)
+        // console.log('🚀 ~ file: ConverterPage.js ~ line 21 ~ onSubmit', "HANDLE CHANGE", e.target.value)
+        // Select.value = "p"
     }
 
     const handleSubmit = (e) => {
@@ -32,11 +34,14 @@ const ConverterPage = (e) => {
         const wordSplit = selectedElement.split(" ")
         const [startTag, endTag] =  wordSplit
         setNewElement(`${startTag} ${name} ${endTag}`)
+        
+        // elementCopy(newElement)
+        // console.log('🚀 ~ file: ConverterPage.js ~ line 32 ~ onSubmit', "newElement", newElement)
+        // console.log('🚀 ~ file: ConverterPage.js ~ line 27 ~ onSubmit', "HANDLE SUBMIT")
     }
-
-    const theme = {
-    spacing: 8,
-    }
+const theme = {
+  spacing: 8,
+}
     return (
         <Fragment> 
         
@@ -48,7 +53,7 @@ const ConverterPage = (e) => {
                 Element-Type</InputLabel>
             </FormControl> */}
 
-            <FormControl>
+            <FormControl >
                 <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
@@ -69,7 +74,16 @@ const ConverterPage = (e) => {
                 <InputLabel></InputLabel>
                 <Input onChange={e => setName(e.target.value)}></Input>
             </FormControl>
+{/* {console.log(name)} */}
             <FormGroup id='convert-to-element-form' onSubmit={handleSubmit}>
+
+
+
+                {/* <Checkbox type="text" name="pTag"
+                // onClick={e => setName(e.target.value)}
+                onClick={e => console.log(e.target)}
+
+                /> */}
 
               {/* <InputLabel> Enter text to be converted </InputLabel> 
                 <Input type="text" placeholder='enter text...' value={name} name="name" onChange={e => setName(e.target.value)}/> */}
@@ -100,11 +114,30 @@ const ConverterPage = (e) => {
                     </Box>
                            } */}
         </div>
+        {/* </Box> */}
+        {/* <Elements/> */}
+        {/* <CopyToClip newElement={handleSubmit.newElement ? handleSubmit.newElement : null }/> */}
+        {/* <ElementsData/> */}
+        {/* </Box> */}
         </Container>
         </Fragment>
     )
 }
 
 
+// const mapStateToProps = state => {
+//     // console.log('state.loadRecipesReducer 1', state.loadRecipesReducer);
+//     // console.log('state.loadRecipesReducer.loadedRecipes 2', state.loadRecipesReducer.loadedRecipes);
+//     // const loadResults = state.loadRecipesReducer.loadedRecipes
+
+//     // loadResults.map(load => load.title)
+//     return(
+//         {
+//             // meals: state.loadRecipesReducer.meals,
+//             name: state.name
+//         }
+//     )
+// }
 
 export default ConverterPage
+// export default connect(null,elementCopy)(ConverterPage)

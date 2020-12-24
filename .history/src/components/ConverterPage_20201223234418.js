@@ -24,6 +24,8 @@ const ConverterPage = (e) => {
         e.preventDefault();
         setSelectedElement(e.target.value)
         setSelected(true)
+        // console.log('🚀 ~ file: ConverterPage.js ~ line 21 ~ onSubmit', "HANDLE CHANGE", e.target.value)
+        // Select.value = "p"
     }
 
     const handleSubmit = (e) => {
@@ -32,11 +34,14 @@ const ConverterPage = (e) => {
         const wordSplit = selectedElement.split(" ")
         const [startTag, endTag] =  wordSplit
         setNewElement(`${startTag} ${name} ${endTag}`)
+        
+        // elementCopy(newElement)
+        // console.log('🚀 ~ file: ConverterPage.js ~ line 32 ~ onSubmit', "newElement", newElement)
+        // console.log('🚀 ~ file: ConverterPage.js ~ line 27 ~ onSubmit', "HANDLE SUBMIT")
     }
-
-    const theme = {
-    spacing: 8,
-    }
+const theme = {
+  spacing: 8,
+}
     return (
         <Fragment> 
         
