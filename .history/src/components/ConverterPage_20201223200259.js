@@ -14,7 +14,10 @@ const ConverterPage = () => {
     const [type, setType] = useState('')
     const [value, setValue] = useState('')
     const [copied, setCopied] = useState(false)
+    // const [options, setOptions] = useState(elementsArray)
+    // const [] = setState([])
 
+    // console.log(elementsArray)
     const handleSubmit = (e) => {
         e.preventDefault();
         setConfirmed(true)

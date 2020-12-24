@@ -1,20 +1,42 @@
 import React, { Fragment, useState, useEffect }from 'react'
-import { Grid, Container, Box, FormControl, FormGroup, Modal, Input, InputLabel, Button, Checkbox, Select, MenuItem } from '@material-ui/core';
-
 import Elements from '../components/Elements'
 import ElementsData from './ElementsData'
 import {optionsArray} from './optionsArray'
 import {CopyToClipboard} from 'react-copy-to-clipboard';
+// import Button from '@material-ui/core/Button';
+// import Box from '@material-ui/core/Box';
+// import Container from '@material-ui/core/Container';
+// import Grid from '@material-ui/core/Grid';
+// import { Input } from '@material-ui/core/';
+// import { Checkbox } from '@material-ui/core/';
+import { Grid, Container, Box, FormControl, FormGroup, Modal, Input, InputLabel, Button, Checkbox, Select, MenuItem } from '@material-ui/core';
+// import  from '@material-ui/core/InputLabel';
+
+
 import CopyToClip from './CopyToClip'
-
-
-const ConverterPage = () => {
+// import PropTypes from 'prop-types'
+// import {setState} from re
+// var [name, setName] = useState()
+// useEffect(() => {
+        //         setState(props.meals);
+        //     }, [props.meals]);
+    const ConverterPage = () => {
+    // var [name, setName] = useState("")
+    // var [confirmed, setConfirmed] = useState(false)
+    // // const [] = setState([])
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     console.log('🚀 ~ file: ConverterPage.js ~ line 8 ~ onSubmit', name)
+        
     var [name, setName] = useState("")
     var [confirmed, setConfirmed] = useState(false)
     const [type, setType] = useState('')
     const [value, setValue] = useState('')
     const [copied, setCopied] = useState(false)
+    // const [options, setOptions] = useState(elementsArray)
+    // const [] = setState([])
 
+    // console.log(elementsArray)
     const handleSubmit = (e) => {
         e.preventDefault();
         setConfirmed(true)
@@ -34,21 +56,30 @@ const ConverterPage = () => {
 
 
  <FormControl >
-        {/* <InputLabel id="demo-simple-select-label">Element-Type</InputLabel> */}
+        <InputLabel id="demo-simple-select-label">Element-Type</InputLabel>
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
         //   value={1}
           onChange={handleSubmit}
         >
-    { optionsArray ?
+    { optionsArray ? 
+        
         optionsArray.map(option => <MenuItem value={option.value}>
-            {option.key}
+            option.key
         </MenuItem>)
+        
         : "null"
-    }
+    } 
+            
+
+          <MenuItem >Ten</MenuItem>
+          {/* <MenuItem value={10}>Ten</MenuItem> */}
+          {/* <MenuItem value={20}>Twenty</MenuItem>
+          <MenuItem value={30}>Thirty</MenuItem> */}
         </Select>
       </FormControl>
+
 
             <FormGroup id='convert-to-element-form' onSubmit={handleSubmit}>
 
@@ -60,8 +91,8 @@ const ConverterPage = () => {
 
                 /> */}
 
-              {/* <InputLabel> Enter text to be converted </InputLabel> 
-                <Input type="text" placeholder='enter text...' value={name} name="name" onChange={e => setName(e.target.value)}/> */}
+              <InputLabel> Enter text to be converted </InputLabel> 
+                <Input type="text" placeholder='enter text...' value={name} name="name" onChange={e => setName(e.target.value)}/>
                 
                 <Button onClick={handleSubmit} type="submit" variant="raised" color="primary">
                         Convert to Tag

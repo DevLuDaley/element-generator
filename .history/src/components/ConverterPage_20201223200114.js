@@ -1,20 +1,42 @@
 import React, { Fragment, useState, useEffect }from 'react'
-import { Grid, Container, Box, FormControl, FormGroup, Modal, Input, InputLabel, Button, Checkbox, Select, MenuItem } from '@material-ui/core';
-
 import Elements from '../components/Elements'
 import ElementsData from './ElementsData'
 import {optionsArray} from './optionsArray'
 import {CopyToClipboard} from 'react-copy-to-clipboard';
+// import Button from '@material-ui/core/Button';
+// import Box from '@material-ui/core/Box';
+// import Container from '@material-ui/core/Container';
+// import Grid from '@material-ui/core/Grid';
+// import { Input } from '@material-ui/core/';
+// import { Checkbox } from '@material-ui/core/';
+import { Grid, Container, Box, FormControl, FormGroup, Modal, Input, InputLabel, Button, Checkbox, Select, MenuItem } from '@material-ui/core';
+// import  from '@material-ui/core/InputLabel';
+
+
 import CopyToClip from './CopyToClip'
-
-
-const ConverterPage = () => {
+// import PropTypes from 'prop-types'
+// import {setState} from re
+// var [name, setName] = useState()
+// useEffect(() => {
+        //         setState(props.meals);
+        //     }, [props.meals]);
+    const ConverterPage = () => {
+    // var [name, setName] = useState("")
+    // var [confirmed, setConfirmed] = useState(false)
+    // // const [] = setState([])
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     console.log('🚀 ~ file: ConverterPage.js ~ line 8 ~ onSubmit', name)
+        
     var [name, setName] = useState("")
     var [confirmed, setConfirmed] = useState(false)
     const [type, setType] = useState('')
     const [value, setValue] = useState('')
     const [copied, setCopied] = useState(false)
+    // const [options, setOptions] = useState(elementsArray)
+    // const [] = setState([])
 
+    // console.log(elementsArray)
     const handleSubmit = (e) => {
         e.preventDefault();
         setConfirmed(true)
@@ -49,6 +71,7 @@ const ConverterPage = () => {
     }
         </Select>
       </FormControl>
+
 
             <FormGroup id='convert-to-element-form' onSubmit={handleSubmit}>
 
