@@ -22,34 +22,29 @@ import Button from '@material-ui/core/Button';
     }
 
     elementCopy = (newElement) => {
-      this.setState(this.props.value = newElement)
-      console.log('WORD', newElement)
-      console.log('PROPS', props)
+
     }
         render() { 
           console.log("COPY newElement", this.props.newElement);
             return(
     // const [] = setState([])
     <Fragment>
-    {/* <h1>COPY TO CLIP</h1> */}
+    <h1>COPY TO CLIP</h1>
             <div>
-        <input value={this.props.newElement}
-          // onChange={({target: {value}}) => this.setState({value, copied: false})}
-           />
+        <input value={this.state.value}
+          onChange={({target: {value}}) => this.setState({value, copied: false})} />
  
-        {/* <CopyToClipboard text={this.state.value}
+        <CopyToClipboard text={this.state.value}
           onCopy={() => this.setState({copied: true})}>
           <span>Copy to clipboard with span</span>
-        </CopyToClipboard> */}
-{ this.props.newElement ?   
-        <CopyToClipboard text={this.props.newElement}
-          onCopy={() => this.setState({copied: true})}>
-          <Button onClick={this.props.newElement ? <span style={{color: 'red'}}>Copied.</span> : null} variant="contained" color="primary">Copy to clipboard</Button>
         </CopyToClipboard>
-        : null
-        }
  
-        {/* {this.props.newElement ? <span style={{color: 'red'}}>Copied.</span> : null} */}
+        <CopyToClipboard text={this.state.value}
+          onCopy={() => this.setState({copied: true})}>
+          <Button variant="contained" color="primary">Copy to clipboard with button</Button>
+        </CopyToClipboard>
+ 
+        {this.state.copied ? <span style={{color: 'red'}}>Copied.</span> : null}
             </div>
         </Fragment> 
         

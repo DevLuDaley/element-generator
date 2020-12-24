@@ -31,7 +31,7 @@ import Button from '@material-ui/core/Button';
             return(
     // const [] = setState([])
     <Fragment>
-    {/* <h1>COPY TO CLIP</h1> */}
+    <h1>COPY TO CLIP</h1>
             <div>
         <input value={this.props.newElement}
           // onChange={({target: {value}}) => this.setState({value, copied: false})}
