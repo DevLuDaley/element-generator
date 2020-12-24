@@ -33,7 +33,7 @@ const ConverterPage = (e) => {
         setConfirmed(true)
         const wordSplit = selectedElement.split(" ")
         const [startTag, endTag] =  wordSplit
-        setNewElement(`${startTag} ${name} ${endTag}`)
+        setNewElement([`${startTag} ${name} ${endTag}`])
         
         // elementCopy(newElement)
         console.log('🚀 ~ file: ConverterPage.js ~ line 32 ~ onSubmit', "newElement", newElement)
@@ -86,7 +86,7 @@ const ConverterPage = (e) => {
                 <Button onClick={handleSubmit} type="submit" variant="contained" color="primary">
                         Convert to Tag
                 </Button>
-                    <CopyToClip newElement={newElement} confirmed={confirmed}/>
+                    <CopyToClip newElement={newElement}/>
               </FormGroup>
               {/* <Button variant="contained" 
               color="primary" 
@@ -95,7 +95,7 @@ const ConverterPage = (e) => {
               </Button> */}
               <br>
               </br>
-              {/* { confirmed ? 
+              { confirmed ? 
                     <section name={name}>
                     &lt;option&gt;
                     <br></br>
@@ -107,7 +107,7 @@ const ConverterPage = (e) => {
                     <Box color="primary">
                     when ready, your results will appear here
                     </Box>
-                           } */}
+                           }
         </div>
         {/* </Box> */}
         {/* <Elements/> */}

@@ -95,7 +95,7 @@ const ConverterPage = (e) => {
               </Button> */}
               <br>
               </br>
-              {/* { confirmed ? 
+              { confirmed ? 
                     <section name={name}>
                     &lt;option&gt;
                     <br></br>
@@ -107,7 +107,7 @@ const ConverterPage = (e) => {
                     <Box color="primary">
                     when ready, your results will appear here
                     </Box>
-                           } */}
+                           }
         </div>
         {/* </Box> */}
         {/* <Elements/> */}
