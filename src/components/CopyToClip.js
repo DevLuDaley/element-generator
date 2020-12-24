@@ -20,7 +20,13 @@ import Button from '@material-ui/core/Button';
         // setConfirmed(true)
         // console.log('🚀 ~ file: ConverterPage.js ~ line 8 ~ onSubmit', name)
     }
+
+    elementCopy = (newElement) => {
+      console.log('WORD', newElement)
+      console.log('PROPS', props)
+    }
         render() { 
+          console.log("COPY newElement", this.props.newElement);
             return(
     // const [] = setState([])
     <Fragment>
