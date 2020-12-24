@@ -69,7 +69,7 @@ const ConverterPage = (e) => {
                 <InputLabel></InputLabel>
                 <Input onChange={e => setName(e.target.value)}></Input>
             </FormControl>
-{/* {console.log(name)} */}
+{console.log(name)}
             <FormGroup id='convert-to-element-form' onSubmit={handleSubmit}>
 
 

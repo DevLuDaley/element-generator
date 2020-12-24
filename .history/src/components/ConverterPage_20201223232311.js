@@ -36,7 +36,7 @@ const ConverterPage = (e) => {
         setNewElement(`${startTag} ${name} ${endTag}`)
         
         // elementCopy(newElement)
-        // console.log('🚀 ~ file: ConverterPage.js ~ line 32 ~ onSubmit', "newElement", newElement)
+        console.log('🚀 ~ file: ConverterPage.js ~ line 32 ~ onSubmit', "newElement", newElement)
         // console.log('🚀 ~ file: ConverterPage.js ~ line 27 ~ onSubmit', "HANDLE SUBMIT")
     }
 
@@ -57,7 +57,7 @@ const ConverterPage = (e) => {
                     value={selectedElement}
                     onChange={handleChange}
                     >
-                    {/* {console.log("selectedElement", selectedElement)} */}
+                    {console.log("selectedElement", selectedElement)}
                         { optionsArray ?
                             optionsArray.map(option => <MenuItem value={option.v} key={option.k}>
                                 {option.k}
@@ -69,7 +69,7 @@ const ConverterPage = (e) => {
                 <InputLabel></InputLabel>
                 <Input onChange={e => setName(e.target.value)}></Input>
             </FormControl>
-{/* {console.log(name)} */}
+{console.log(name)}
             <FormGroup id='convert-to-element-form' onSubmit={handleSubmit}>
 
 
