@@ -52,7 +52,6 @@ const ConverterPage = (e) => {
                 <InputLabel id="demo-simple-select-label">
                 Enter Text to Create An Element </InputLabel>
             </FormGroup>
-            <br></br>
             <FormGroup>
                 <Select
                     labelId="demo-simple-select-label"

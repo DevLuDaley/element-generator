@@ -40,20 +40,15 @@ const ConverterPage = (e) => {
     return (
         <Fragment> 
         
-        <Container maxWidth="sm">
+        <Container maxWidth="md">
             <h1>HTML ELEMENT CREATOR</h1>
         <div>
-
-            <FormGroup >
-                <Input onChange={e => setName(e.target.value)}></Input>
-            </FormGroup>
-
-            <FormGroup>
+            {/* <FormControl>
                 <InputLabel id="demo-simple-select-label">
-                Enter Text to Create An Element </InputLabel>
-            </FormGroup>
-            <br></br>
-            <FormGroup>
+                Element-Type</InputLabel>
+            </FormControl> */}
+
+            <FormControl>
                 <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
@@ -67,13 +62,13 @@ const ConverterPage = (e) => {
                             </MenuItem>)
                             : "null"            }
                 </Select>
-                                <InputLabel>
-                 Select Element Type
-                </InputLabel>
                 <br></br>
                 <br></br>
-            </FormGroup>
-
+            </FormControl>
+            <FormControl>
+                <InputLabel></InputLabel>
+                <Input onChange={e => setName(e.target.value)}></Input>
+            </FormControl>
             <FormGroup id='convert-to-element-form' onSubmit={handleSubmit}>
 
               {/* <InputLabel> Enter text to be converted </InputLabel> 

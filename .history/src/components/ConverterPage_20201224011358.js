@@ -43,16 +43,17 @@ const ConverterPage = (e) => {
         <Container maxWidth="sm">
             <h1>HTML ELEMENT CREATOR</h1>
         <div>
+            {/* <FormControl>
+                <InputLabel id="demo-simple-select-label">
+                Element-Type</InputLabel>
+            </FormControl> */}
+
 
             <FormGroup >
+                <InputLabel></InputLabel>
                 <Input onChange={e => setName(e.target.value)}></Input>
             </FormGroup>
 
-            <FormGroup>
-                <InputLabel id="demo-simple-select-label">
-                Enter Text to Create An Element </InputLabel>
-            </FormGroup>
-            <br></br>
             <FormGroup>
                 <Select
                     labelId="demo-simple-select-label"
@@ -67,9 +68,6 @@ const ConverterPage = (e) => {
                             </MenuItem>)
                             : "null"            }
                 </Select>
-                                <InputLabel>
-                 Select Element Type
-                </InputLabel>
                 <br></br>
                 <br></br>
             </FormGroup>
