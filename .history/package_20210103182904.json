@@ -9,9 +9,11 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node server.js",
-    "heroku-postbuild": "webpack serve --mode production --open index.js",
+    "heroku-postbuild": "webpack -p",
     "dev": "webpack serve --mode development --open index.js",
     "heroku-start": "react-scripts src/index.js",
+    "webpack-dev-server": "webpack-dev-server",
+    "start:dev": "webpack serve --mode=development --open index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prod": "webpack --mode=production"
   },
@@ -34,6 +36,8 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
     "style-loader": "^2.0.0",
+    "webpack": "^5.11.0",
+    "webpack-cli": "^4.3.1",
     "webpack-dev-server": "^3.11.0"
   },
   "devDependencies": {
@@ -44,7 +48,7 @@
     "babel-loader": "^8.2.2",
     "html-webpack-plugin": "^4.5.0",
     "path": "^0.12.7",
-    "webpack": "^5.11.1",
+    "webpack": "^5.11.0",
     "webpack-cli": "^4.3.1",
     "webpack-dev-server": "^3.11.0"
   }
