@@ -92,3 +92,4 @@ lerna-debug.log
 Thumbs.db
 
 webpack-setup-project/lil-react-ecosystem/
+node_modules
