@@ -2,10 +2,10 @@
   "name": "element-generator",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
-    "start": "webpack serve --mode development --open index.js",
-    "heroku-start": "react-scripts src/index.js",
+    "start": "webpack serve --mode development --open src/index.js",
+    "heroku-start": "react-scripts index.js",
     "webpack-dev-server": "webpack-dev-server",
     "start:dev": "webpack serve --mode=development --open index.js",
     "dev": "webpack-dev-server --mode=development --open index.js",
@@ -29,10 +29,7 @@
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
-    "style-loader": "^2.0.0",
-    "webpack": "^5.11.0",
-    "webpack-cli": "^4.2.0",
-    "webpack-dev-server": "^3.11.0"
+    "style-loader": "^2.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
