@@ -4,12 +4,12 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "start": "webpack serve --mode development --open index.js",
+    "start": "node server.js",
+    "heroku-postbuild": "webpack -p",
+    "dev": "webpack serve --mode development --open index.js",
     "heroku-start": "react-scripts src/index.js",
     "webpack-dev-server": "webpack-dev-server",
     "start:dev": "webpack serve --mode=development --open index.js",
-    "dev": "webpack-dev-server --mode=development --open index.js",
-    "devy": "webpack --mode development --open 'chrome",
     "build": "npx webpack --mode development",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prod": "webpack --mode=production"
@@ -20,7 +20,10 @@
   "dependencies": {
     "@material-ui/core": "^4.11.2",
     "css-loader": "^5.0.1",
+    "express": "^4.17.1",
     "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^4.5.0",
+    "path": "^0.12.7",
     "react": "^17.0.1",
     "react-copy-to-clipboard": "^5.0.2",
     "react-dom": "^17.0.1",
@@ -30,8 +33,6 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
     "style-loader": "^2.0.0",
-    "html-webpack-plugin": "^4.5.0",
-    "path": "^0.12.7",
     "webpack": "^5.11.0",
     "webpack-cli": "^4.2.0",
     "webpack-dev-server": "^3.11.0"
