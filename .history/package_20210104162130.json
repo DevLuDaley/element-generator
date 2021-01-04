@@ -10,7 +10,11 @@
   "scripts": {
     "dev": "webpack serve --mode development --open index.js",
     "start": "node server.js",
-    "build": "webpack --mode production"
+    "build": "webpack",
+    "heroku-start": "react-scripts src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-server": "webpack-dev-server",
+    "prod": "webpack --mode=production"
   },
   "keywords": [],
   "author": "",
