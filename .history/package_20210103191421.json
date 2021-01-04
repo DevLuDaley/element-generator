@@ -9,6 +9,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node server.js",
+    "heroku-postbuild": "webpack serve --mode production --open index.js",
     "dev": "webpack serve --mode development --open index.js",
     "build": "webpack serve --mode production",
     "heroku-start": "react-scripts src/index.js",
@@ -33,7 +34,8 @@
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
-    "style-loader": "^2.0.0"
+    "style-loader": "^2.0.0",
+    "webpack-dev-server": "^3.11.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
@@ -46,6 +48,6 @@
     "path": "^0.12.7",
     "webpack": "^5.11.1",
     "webpack-cli": "^4.3.1",
-    "webpack-dev-server": "^3.11.1"
+    "webpack-dev-server": "^3.11.0"
   }
 }
